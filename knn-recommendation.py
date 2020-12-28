@@ -22,8 +22,8 @@ def write_json(data, fname):
         raise TypeError
 
     parent = os.path.dirname(fname)
-    distutils.dir_util.mkpath("./arena_data/" + parent)
-    with io.open("./arena_data/" + fname, "w", encoding="utf8") as f:
+    distutils.dir_util.mkpath("./res/" + parent)
+    with io.open("./res/" + fname, "w", encoding="utf8") as f:
         json_str = json.dumps(data, ensure_ascii=False, default=_conv)
         f.write(json_str)
 
